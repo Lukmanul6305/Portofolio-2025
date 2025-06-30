@@ -1,41 +1,76 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const typingTextElement = document.querySelector('.typing-text');
-    const textArray = ["Fullstack Developer", "Frontend Developer", "Backend Developer"];
-    let textIndex = 0;
+// 1. Fungsi untuk Menu Hamburger (Mobile)
+const navSlide = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    hamburger.addEventListener('click', () => {
+        // Toggle Nav
+        nav.classList.toggle('nav-active');
+
+        // Animate Links
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            }
+        });
+
+        // Hamburger Animation
+        hamburger.classList.toggle('toggle');
+    });
+}
+
+// 2. Fungsi untuk Efek Ketikan (Typing Effect)
+const typingEffect = () => {
+    const typingText = document.querySelector('.typing-text');
+    const roles = ["Fullstack Developer", "Frontend Developer", "Backend Developer"];
+    let roleIndex = 0;
     let charIndex = 0;
-    let isDeleting = false;
-    const typingSpeed = 150; // Kecepatan mengetik (ms per karakter)
-    const deletingSpeed = 100; // Kecepatan menghapus (ms per karakter)
-    const delayBeforeNextText = 1500; // Jeda sebelum mengetik teks berikutnya (ms)
 
     function type() {
-        const currentText = textArray[textIndex];
-        if (isDeleting) {
-            // Menghapus karakter
-            typingTextElement.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            // Mengetik karakter
-            typingTextElement.textContent = currentText.substring(0, charIndex + 1);
+        if (charIndex < roles[roleIndex].length) {
+            typingText.textContent += roles[roleIndex].charAt(charIndex);
             charIndex++;
+            setTimeout(type, 100);
+        } else {
+            setTimeout(erase, 2000);
         }
-
-        let currentSpeed = isDeleting ? deletingSpeed : typingSpeed;
-
-        if (!isDeleting && charIndex === currentText.length) {
-            // Teks selesai diketik, jeda sebelum menghapus
-            currentSpeed = delayBeforeNextText;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            // Teks selesai dihapus, ganti ke teks berikutnya
-            isDeleting = false;
-            textIndex = (textIndex + 1) % textArray.length; // Pindah ke teks berikutnya, kembali ke awal jika sudah di akhir
-            currentSpeed = typingSpeed;
-        }
-
-        setTimeout(type, currentSpeed);
     }
 
-    // Mulai efek mengetik setelah halaman dimuat
-    type();
+    function erase() {
+        if (charIndex > 0) {
+            typingText.textContent = roles[roleIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 50);
+        } else {
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(type, 500);
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        if (typingText) {
+            setTimeout(type, 500);
+        }
+    });
+}
+
+
+// Panggil semua fungsi
+navSlide();
+typingEffect();
+
+// Bonus: Animasi scroll untuk timeline (jika Anda masih menggunakannya)
+const timelineObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.timeline-item').forEach(item => {
+    timelineObserver.observe(item);
 });

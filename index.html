@@ -1,121 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="x-icon" href="assets/img/web-icon.webp" />
-    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Portofolio Lukmanul Hakim</title>
-  </head>
-  <body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
     <header>
-      <h1><a href="#">Lukmanul Hakim</a></h1>
-      <nav>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#Experience">Experience</a></li>
-        <li><a href="#Contact">Contact</a></li>
-      </nav>
+        <div class="logo">
+            <a href="#home">Lukmanul Hakim</a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
     </header>
 
     <main>
-      <section class="hero" id="#">
-        <span class="desain-hero-small"></span>
-        <span class="desain-hero"></span>
-        <div class="hero-text">
-          <p>
-            <span class="hero-text-1">I'am</span><br />
-            Lukmanul Hakim <br />
-            <span class="hero-text-2">I'am a </span><span class="typing-text"></span>
-          </p>
-          <button>Download CV</button>
-        </div>
-        <div class="profile">
-          <img src="assets/img/profile.png" alt="Lukmanul hakim" />
-        </div>
-      </section>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="greeting">Hi, I'm</p>
+                    <h1>Lukmanul Hakim</h1>
+                    <p class="role">I'm a <span class="typing-text"></span></p>
+                    <a href="path/to/your/cv.pdf" class="btn" download>Download CV</a>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/img/profile.png" alt="Lukmanul Hakim" />
+                </div>
+            </div>
+        </section>
 
-      <section id="about">
-        <div class="header-about">
-          <h1>About</h1>
-        </div>
-        <div class="paragraf-header">
-          <span class="desain-round"></span>
-          <div class="text-paragraf">
-            <p>I am Lukmanul Hakim, an active computer engineering student with skills in fullstack developer development. I have created several fullstack developer website projects, and I am still learning and growing every day</p>
-            <p>
-              My passion is creating functional and attractive web application solutions, from the user interface to data management in the backend. Proficient in fullstack development with modern technologies such as HTML, CSS, JavaScript,
-              Tailwind CSS, Bootstrap, React.js, and Node.js and Express.js for the backend.
-            </p>
-            <p>I am currently serving as a Computer Lab Assistant, contributing to the academic environment and providing practical assistance to fellow students</p>
-            <p>
-              Open to new challenges and collaborations, I am eager to connect with fellow enthusiasts, developers, and potential collaborators. As you explore my projects, you will find a variety of projects that demonstrate my dedication
-              to creativity
-            </p>
-            <p>I am now looking for exciting opportunities to apply my skills and contribute to innovative projects. Let's explore potential collaborations and embark on a journey of creativity and innovation together!</p>
-          </div>
-          <span class="desain-round-2"></span>
-        </div>
-      </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am Lukmanul Hakim, a computer engineering student with a passion for full-stack development. I have created several web projects from scratch, and I am continuously learning and growing every day.</p>
+                    <p>My passion is building robust and efficient web applications, from designing an intuitive user interface to managing data in the backend. I'm proficient in modern technologies like React.js, Node.js, Express.js, and MySQL.</p>
+                    <p>Currently, I'm also serving as a Laboratory Assistant, where I contribute to the academic environment by providing practical assistance to fellow students. I am now looking for exciting opportunities to apply my skills and contribute to innovative projects.</p>
+                </div>
+            </div>
+        </section>
 
-      <section id="skills">
-        <div class="header-skills">
-          <h1>Skills</h1>
-        </div>
-        <div class="all-card">
-          <span class="card-1"><img src="https://images.icon-icons.com/2107/PNG/512/file_type_html_icon_130541.png" alt="html" /></span>
-          <span class="card-2"><img src="https://images.icon-icons.com/2107/PNG/512/file_type_css_icon_130661.png" alt="css" /></span>
-          <span class="card-3"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="javascript" /></span>
-          <span class="card-4"><img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="python" /></span>
-          <span class="card-5"><img src="https://www.svgrepo.com/show/331760/sql-database-generic.svg" alt="sql" /></span>
-          <span class="card-6"><img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png" alt="expressjs" /></span>
-          <span class="card-7"><img src="https://nodejs.org/static/images/logo.svg" alt="nodejs" /></span>
-          <span class="card-8"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="php" /></span>
-          <span class="card-9"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="tailwindcss" /></span>
-          <span class="card-10"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="reactjs" /></span>
-        </div>
-        <span class="segitiga"></span>
-      </section>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card"><img src="https://images.icon-icons.com/2107/PNG/512/file_type_html_icon_130541.png" alt="HTML" /><span>HTML</span></div>
+                <div class="skill-card"><img src="https://images.icon-icons.com/2107/PNG/512/file_type_css_icon_130661.png" alt="CSS" /><span>CSS</span></div>
+                <div class="skill-card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" /><span>JavaScript</span></div>
+                <div class="skill-card"><img src="https://images.icon-icons.com/2415/PNG/512/react_original_logo_icon_146374.png" alt="React.js" /><span>React.js</span></div>
+                <div class="skill-card"><img src="https://images.icon-icons.com/2699/PNG/512/nodejs_logo_icon_169910.png" alt="Node.js" /><span>Node.js</span></div>
+                <div class="skill-card"><img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png" alt="Express.js" /><span>Express.js</span></div>
+                <div class="skill-card"><img src="https://images.icon-icons.com/2107/PNG/512/file_type_php_icon_130266.png" alt="PHP" /><span>PHP</span></div>
+                <div class="skill-card"><img src="https://images.icon-icons.com/2699/PNG/512/mysql_logo_icon_169940.png" alt="MySQL" /><span>MySQL</span></div>
+                <div class="skill-card"><img src="https://images.icon-icons.com/2699/PNG/512/python_logo_icon_168886.png" alt="Python" /><span>Python</span></div>
+                <div class="skill-card"><img src="https://images.icon-icons.com/2107/PNG/512/file_type_tailwind_icon_130128.png" alt="Tailwind CSS" /><span>Tailwind CSS</span></div>
+            </div>
+        </section>
 
-      <section id="Projects">
-        <div class="header-projects">
-          <h1>Projects</h1>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="assets/img/web-silaku.png" alt="SILAKU Project" />
+                    <div class="project-info">
+                        <h3>SILAKU - Financial Report System</h3>
+                        <p>A complete application developed to simplify and automate the financial reporting process. This project is part of my internship project and demonstrates my ability to handle end-to-end development, from database design to user interface implementation.</p>
+                        <div class="project-stack">
+                            <span>ReactJs</span><span>TailwindCSS</span><span>Express.js</span><span>Node.js</span><span>MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/Lukmanul6305/MAGANG-sistem-laporan-keuangan.git" class="btn-link">Source Code <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reverse">
+                    <img src="assets/img/e-commerce.png" alt="E-commerce Project" />
+                    <div class="project-info">
+                        <h3>E-commerce Platform</h3>
+                        <p>This front-end application was created as an assignment for the Web Programming course with the theme of e-commerce online learning. This project displays a user interface for an IT-based programming course platform, built using React.js with a focus on responsive and functional displays.</p>
+                        <div class="project-stack">
+                            <span>ReactJs</span><span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                             <a href="#" class="btn-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/Lukmanul6305/e-commerce-pemweb-project.git" class="btn-link">Source Code <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience-section">
+            <section id="experience" class="experience-section">
+    <h2>My Experience</h2>
+    <div class="timeline">
+
+        <div class="timeline-item professional">
+            <div class="timeline-content">
+                <i class="fas fa-briefcase timeline-icon"></i>
+                <h3>Fullstack Developer Intern</h3>
+                <h4>PT Winnicode Garuda Teknologi | April, 2025 - juli, 2025</h4>
+                <ul>
+                    <li>Developed the SILAKU (Financial Report System) web application from concept to completion.</li>
+                    <li>Building and maintaining APIs using Node.js and Express.js to handle all business logic.</li>
+                    <li>Designed and managed an efficient relational database schema with MySQL.</li>
+                    <li>Created a responsive and interactive user interface using React.js and Tailwind CSS.</li>
+                </ul>
+            </div>
         </div>
-        <div class="card-projects">
-          <div class="card-project-1">
-            <img src="assets/img/web-porto.png" alt="ss projects" />
-            <p>
-              <b>Portofolio App</b>
-              <span>frontend project . 2025</span>
-              <span class="p-stack">tech-stack : html,css,javascript</span>
-              I built this portfolio as a digital showcase using pure HTML, CSS, and JavaScript to showcase a strong and responsive frontend foundation. However, my main focus and passion is on full-stack development.
-            </p>
-          </div>
-          <div class="card-project-2">
-            <p>
-              <b>Sistem laporan keuangan</b>
-              <span>fullstack project . 2025</span>
-              <span class="p-stack">tech-stack : ReactJs,tailwindcss,expressjs,nodejs,mysql</span>
-              The financial report system is a fullstack developer website. A fairly complex website and what I am proud of, this website can solve financial problems such as recording income, expenses and so on.
-            </p>
-            <img src="assets/img/web-silaku.png" alt="ss projects" />
-          </div>
-          <div class="card-project-3">
-            <img src="assets/img/web-porto.png" alt="ss projects" />
-            <p>
-              <b>E-commerce</b>
-              <span>frontend project . 2025</span>
-              <span class="p-stack">tech-stack : ReactJs</span>
-              Creating an e-commerce application using React.js to complete an assignment in a web programming course.
-            </p>
-          </div>
+
+        <div class="timeline-item academic">
+            <div class="timeline-content">
+                <i class="fas fa-flask timeline-icon"></i>
+                <h3>Laboratory Assistant</h3>
+                <h4>stikom poltek cirebon | 2024</h4>
+                <ul>
+                    <li>Assist instructors in managing computer laboratory practicums for Web Design and Web Programming courses, providing technical guidance to approximately 10-35 students per session.</li>
+                    <li>Maintain and prepare the software environment in the laboratory before the practical session.</li>
+                    <li>Providing support to students in understanding the material from the lecturer, solving problems and ensuring that practical sessions run smoothly and helping to deliver the material.</li>
+                </ul>
+            </div>
         </div>
-      </section>
+
+    </div>
+</section>
+        </section>
+
+        <footer id="contact">
+             <h2>Contact Me</h2>
+             <p>I'm currently looking for new opportunities. Feel free to reach out!</p>
+             <div class="contact-links">
+                <a href="mailto:lukmanulhakim6305@gmail.com"><i class="fas fa-envelope"></i> lukmanulhakim6305@gmail.com</a>
+                <a href="https://www.linkedin.com/in/lukmanul-hakim-607a80290/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Lukmanul6305" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+             </div>
+             <p class="copyright">&copy; 2025 Lukmanul Hakim.</p>
+        </footer>
     </main>
 
-    <footer></footer>
-
     <script src="main.js"></script>
-  </body>
+</body>
 </html>

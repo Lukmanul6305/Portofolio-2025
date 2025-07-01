@@ -22,7 +22,6 @@ const navSlide = () => {
     });
 }
 
-// 2. Fungsi untuk Efek Ketikan (Typing Effect)
 const typingEffect = () => {
     const typingText = document.querySelector('.typing-text');
     const roles = ["Fullstack Developer", "Frontend Developer", "Backend Developer"];
@@ -58,11 +57,9 @@ const typingEffect = () => {
 }
 
 
-// Panggil semua fungsi
 navSlide();
 typingEffect();
 
-// Bonus: Animasi scroll untuk timeline (jika Anda masih menggunakannya)
 const timelineObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

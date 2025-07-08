@@ -71,3 +71,22 @@ const timelineObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.timeline-item').forEach(item => {
     timelineObserver.observe(item);
 });
+
+//animasi
+const animatedElements = document.querySelectorAll('.animate');
+
+const scrollObserver = () => {
+  animatedElements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight - 100) {
+      el.classList.add('show');
+    } else {
+      el.classList.remove('show'); // opsional jika ingin muncul hanya sekali bisa dihapus
+    }
+  });
+};
+
+window.addEventListener('scroll', scrollObserver);
+window.addEventListener('load', scrollObserver);
